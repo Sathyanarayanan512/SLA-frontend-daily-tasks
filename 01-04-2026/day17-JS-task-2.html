@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TASK 2</h1>
+    </header>
+    <div id="water">
+    <div id="boatMembers">
+        <ul>
+            
+            <li id="sathya"><button onclick="askingRoute('Sathya')" disabled>Sathya</button></li>
+            <li id="naraynanan"><button onclick="askingRoute('Narayanan')" disabled>Narayanan</button></button></li>
+            <li id="jack"><button onclick="askingRoute('Jack')">Jack</button></button></li>
+            <li id="alice"><button onclick="askingRoute('Alice')">Alice</button></button></li>
+        </ul>
+        <p>BOAT</p>
+    </div>
+    <footer>WATER</footer>
+    </div>
+    <script>
+        function askingRoute(name){
+            if(name=='Jack'){
+                alert("Go by the NORTH direction");
+                document.getElementById('boatMembers').style='margin-left: 200px';
+            }
+            else if(name=='Alice'){
+                alert("Go by the WEST direction");
+                document.getElementById('boatMembers').style='margin-left:800px';
+            }
+        }
+    </script>
+</body>
+</html>

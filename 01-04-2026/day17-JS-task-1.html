@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TASK 1</h1>
+    </header>
+    <div id="numcheck">
+        <h2>Number Checker:</h2>
+        <input type="number" id="chnumber" placeholder="Enter a number">
+        <button onclick="checkItsSign()">Check Its Sign</button>
+        <div id="output1"></div>
+    </div>
+    <div id="weekdays">
+        <h2>Days of The Week:</h2>
+        <input type="number" id="daynumber" placeholder="Enter a number(1-7) for getting day name">
+        <button onclick="dayProvider()">Day Name</button>
+        <div id="output2"></div>
+    </div>
+    <footer></footer>
+    <script>
+        function checkItsSign(){
+            let num=document.getElementById('chnumber').value;
+            if(num>0){
+                document.getElementById('output1').textContent='Positive';
+            }
+            else if(num<0){
+                document.getElementById('output1').textContent='Negative';
+            }
+            else{
+                document.getElementById('output1').textContent='Zero';
+            }
+        }
+
+        function dayProvider(){
+            let dayNum=Number(document.getElementById('daynumber').value);
+            let dayName;
+            switch(dayNum){
+                case 1:
+                    dayName='Sunday';
+                    break;
+                case 2:
+                    dayName='Monday';
+                    break;
+                case 3:
+                    dayName='Tuesday';
+                    break;
+                case 4:
+                    dayName='Wednesday';
+                    break;
+                case 5:
+                    dayName='Thursday';
+                    break;
+                case 6:
+                    dayName='Friday';
+                    break;
+                case 7:
+                    dayName='Saturday';
+                    break;
+                default:
+                    dayName='Enter valid day number';
+                    break;
+            }
+            document.getElementById('output2').textContent=dayName;
+        }
+    </script>
+    
+</body>
+</html>
