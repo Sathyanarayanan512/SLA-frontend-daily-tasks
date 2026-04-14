@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main-heading{
+            font-size: 40px;
+            font-family: verdana;
+            background-color: lightsteelblue;   
+            padding: 25px;
+            margin: 0px 300px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        #certificate{
+            padding: 20px;
+            text-align: center;
+            box-shadow: 2px 5px 5px;
+            width: 600px;
+            margin: 20px 400px;
+            background-color: wheat;
+        }
+        #certificate-border{
+            border: 3px solid black;
+            padding: 20px;
+            height: 350px;
+            width: 550px;
+            background-color: white;
+        }
+        #input-fields{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background-color: lightsteelblue;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px 600px;
+        }
+        #txt-input{
+            padding: 10px;
+            font-size: 20px;
+            font-family: monospace;
+        }
+        pre{
+            font-family: monospace;
+            font-size: 20px;
+        }
+        #btn-click{
+            padding: 10px;
+            background-color: wheat;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        h2{
+            font-size: 25px;
+        }
+        h4{
+            font-size: 20px;
+        }
+        #seal{
+            padding: 10px;
+            margin: 30px 10px 0px 400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-heading">Make your own Useless Certificate</h1>
+    </header>
+    <div id="certificate">
+        <div id="certificate-border">
+        <img src="certificate-interactive-ui-design-vector.jpg" width="100px" height="100px">
+        <h2>THE CERTIFICATE OF USELESSNESS</h2>
+        <h4><i>And this certification goes to the useless person,</i><pre style="display: inline;">  <u><p id="name" style="display: inline;"></p></u></pre>.</h4>
+        <div id="seal">
+            <img src="useless-rubber-grunge-seal-600w-422165626.webp" width="70px" height="70px">
+        </div>
+        </div>
+    </div>
+    <div id="input-fields">
+    <input type="text" id="txt-input" placeholder="Enter Your Name" oninput="textDisplay()" hidden>
+    <button id="btn-click">Add your Name</button>
+    </div>
+
+    <footer></footer>
+    <script>
+        let btnClick = document.getElementById('btn-click');
+        let txtInput = document.getElementById('txt-input');
+
+        btnClick.addEventListener('click', () =>{
+            alert("Button Click Event Triggered!");
+            txtInput.hidden = false;
+            btnClick.hidden = true;
+        });
+
+        function textDisplay(){
+            let name = document.getElementById('name');
+            name.textContent=txtInput.value;
+        }
+    </script>
+</body>
+</html>
